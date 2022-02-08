@@ -3,13 +3,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
 public class JsonDemo {
 
     public static void main(String[] args) throws JsonProcessingException {
-        Foo f = new Foo(1, "First");
+        ArrayList<String[]> list = new ArrayList<>();
+        list.add(new String[]{"Second", "Third", "Fourth"});
+        Foo f = new Foo(1, "First", (ArrayList<String>) list);
         ObjectMapper mapper = new ObjectMapper();
 
         String jsonStr = mapper.writeValueAsString(f);
