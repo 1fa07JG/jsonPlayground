@@ -2,9 +2,12 @@ public class Foo {
     int id;
     String name;
 
-    Foo(int i,String s){
-    id=i;
-    name=s;
+    public Foo() {
+    }
+
+    public Foo(int i, String s) {
+        id = i;
+        name = s;
     }
 
     public String getName() {
@@ -16,4 +19,10 @@ public class Foo {
     }
 
 
+    public String toString() {
+        return "Foo{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
